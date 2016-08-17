@@ -12,7 +12,7 @@ module JsonMatchers
 
       JSON::Validator.validate!(
         schema_path.to_s,
-        response.body,
+        response,
         options,
       )
     rescue JSON::Schema::ValidationError => ex
